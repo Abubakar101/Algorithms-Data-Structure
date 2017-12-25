@@ -20,7 +20,36 @@ function destroyer(...arr) {
   return initial;
 }
 
+// On
+function destroyer(...arr) {
+  let initial = arr[0]; 
+  let secArg = arr;
+  secArg.splice(0,1);
 
+  let tempArr = [];
+  let map = {};
+  for (let j = 0; j < secArg.length; j++) {
+    map[secArg[j]] = true;
+  }
+
+  for (let i = initial.length-1; i > -1; i--){
+    if (map[initial[i]] !== undefined){
+      initial.splice(i,1);
+    }
+  }
+
+  return initial;
+}
+
+// On and using filter method, one for loop and arguments object
+function destroyer(arr) {
+let map = {};
+  for (let key in arguments) {
+    if (key == 0) continue;
+    map[arguments[key]] = true;
+  }
+  return arr.filter((e) => map[e] == undefined)
+}
 
 
 
