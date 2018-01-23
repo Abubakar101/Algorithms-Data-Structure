@@ -14,6 +14,12 @@ function dropElements(arr, func) {
   return [];
 }
 
+
+// Arrow function 
+
+const dropElements = (arr, func) => ((arr.findIndex(func) !== -1) && arr.slice(arr.findIndex(func)) || []);
+
+
 dropElements([1, 2, 3], function(n) {return n < 3; });
 
 dropElements([1, 2, 3, 4], function(n) {return n >= 3;})
