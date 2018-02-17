@@ -12,7 +12,6 @@
 // The word "kangaroo" is the longest word in D, but it isn't a subsequence of S.
 
 // Learning objectives
-
 // This question gives you the chance to practice with algorithms and data structures. It’s also a good example of why careful analysis for Big-O performance is often worthwhile, as is careful exploration of common and worst-case input conditions.
 
 const D = ['able', 'ale', 'apple', 'bale', 'kangaroo'];
