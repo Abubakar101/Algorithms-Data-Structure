@@ -7,13 +7,12 @@ function encoder(firstArr, secArr) {
 		if (!obj[firstArr[char]]) {
 			obj[firstArr[char]] = secArr[char];
 		}
-	}
 
-	for (let char of firstArr) {
-		if (obj[char]) {
-			newArr.push(obj[char]);
+		if (obj[firstArr[char]]) {
+			newArr.push(obj[firstArr[char]]);
 		}
 	}
+
 	console.log(newArr);
 }
 
