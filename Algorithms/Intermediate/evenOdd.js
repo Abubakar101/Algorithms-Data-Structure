@@ -5,7 +5,7 @@ function evenOdd(arr) {
 
 	for (let num of arr) {
 		if (num % 2 === 0) {
-			event++;
+			even++;
 		} else {
 			odd++;
 		}
