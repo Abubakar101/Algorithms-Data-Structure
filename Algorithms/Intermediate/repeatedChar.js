@@ -2,21 +2,19 @@
 
 function repeatedChar(str) {
 	const charsObj = {};
-	let largestNum = 0,
+	let largestNum = 1,
 		repeatedChar = '';
 
 	for (let char of str) {
 		if (charsObj[char]) {
 			charsObj[char]++;
+
+			if (charsObj[char] > largestNum) {
+				largestNum = charsObj[char];
+				repeatedChar = char;
+			}
 		} else {
 			charsObj[char] = 1;
-		}
-	}
-
-	for (let key in charsObj) {
-		if (charsObj[key] > largestNum) {
-			largestNum = charsObj[key];
-			repeatedChar = key;
 		}
 	}
 
