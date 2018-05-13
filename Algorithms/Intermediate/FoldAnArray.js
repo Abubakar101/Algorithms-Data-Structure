@@ -38,7 +38,7 @@ function foldArray(array, runs) {
 	let arr = array;
 	let newArr = [];
 
-	let midNum =
+	let midIndex =
 		(arr.length % 2 !== 0 && Math.floor(arr.length / 2)) || arr.length / 2;
 	let count = 0;
 
@@ -46,14 +46,14 @@ function foldArray(array, runs) {
 		// Stop at 1 length;
 		if (!arr[1] && arr[1] !== 0) break;
 		let tempArr = [];
-		for (let i = 0, k = arr.length - 1; i < midNum; i++, k--) {
+		for (let i = 0, k = arr.length - 1; i < midIndex; i++, k--) {
 			tempArr.push(arr[i] + arr[k]);
 		}
-		arr.length % 2 !== 0 && tempArr.push(arr[midNum]);
+		arr.length % 2 !== 0 && tempArr.push(arr[midIndex]);
 		count++;
 
 		if (count < runs) {
-			midNum =
+			midIndex =
 				(tempArr.length % 2 !== 0 && Math.floor(tempArr.length / 2)) ||
 				tempArr.length / 2;
 			arr = tempArr;
