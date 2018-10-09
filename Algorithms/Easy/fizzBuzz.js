@@ -1,5 +1,3 @@
-// ** Python(Preferably) Or Javascript**
-
 // FizzBuzz - Write a function that prints out numbers 1 though 50 except:
 // - For multiples of 3 it prints out Fizz
 // - For multiples of 5 it prints out Buzz
