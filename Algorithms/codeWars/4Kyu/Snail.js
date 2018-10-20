@@ -1,6 +1,8 @@
 https://www.codewars.com/kata/snail/train/javascript
 
 const snail = paramArr => {
+  if (paramArr[0].length === 0) return [];
+
   const newArr = [];
   let topLeft = 0,
     topRight = paramArr[topLeft].length - 1,
